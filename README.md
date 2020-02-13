@@ -31,12 +31,12 @@ In addition, please add the project folder to PYTHONPATH and `pip install` the f
 
 **Training**
 - Pre-train DAMSM models:
-  - For bird dataset: `python pretrain_DAMSM.py --cfg cfg/DAMSM/bird.yml --gpu 0`
-  - For coco dataset: `python pretrain_DAMSM.py --cfg cfg/DAMSM/coco.yml --gpu 1`
+  - For bird dataset: `python3 pretrain_DAMSM.py --cfg cfg/DAMSM/bird.yml --gpu 0`
+  - For coco dataset: `python3 pretrain_DAMSM.py --cfg cfg/DAMSM/coco.yml --gpu 0`
  
 - Train AttnGAN models:
-  - For bird dataset: `python main.py --cfg cfg/bird_attn2.yml --gpu 2`
-  - For coco dataset: `python main.py --cfg cfg/coco_attn2.yml --gpu 3`
+  - For bird dataset: `python3 main.py --cfg cfg/bird_attn2.yml --gpu 0`
+  - For coco dataset: `python3 main.py --cfg cfg/coco_attn2.yml --gpu 0`
 
 - `*.yml` files are example configuration files for training/evaluation our models.
 
@@ -52,7 +52,7 @@ In addition, please add the project folder to PYTHONPATH and `pip install` the f
   - This is an variant of AttnGAN which applies the propsoed attention mechanisms to DCGAN framework. 
 
 **Sampling**
-- Run `python main.py --cfg cfg/eval_bird.yml --gpu 1` to generate examples from captions in files listed in "./data/birds/example_filenames.txt". Results are saved to `DAMSMencoders/`. 
+- Run `python3 main.py --cfg cfg/eval_bird.yml --gpu 0` to generate examples from captions in files listed in "./data/birds/example_filenames.txt". Results are saved to `DAMSMencoders/`. 
 - Change the `eval_*.yml` files to generate images from other pre-trained models. 
 - Input your own sentence in "./data/birds/example_captions.txt" if you wannt to generate images from customized sentences. 
 
